@@ -14,24 +14,24 @@
     <tbody>
       <?php echo $form->renderGlobalErrors() ?>
       <tr>
-        <th><?php echo $form['email']->renderLabel() ?></th>
+        <th><?php echo $form['email']->renderLabel() ?><span class="red">*</span></th>
         <td>
           <?php echo $form['email']->renderError() ?>
-          <?php echo $form['email'] ?>
+          <?php echo $form['email'] ?><div class="input-validation"></div>
         </td>
       </tr>
       <tr>
-        <th><?php echo $form['title']->renderLabel() ?></th>
+        <th><?php echo $form['title']->renderLabel() ?><span class="red">*</span></th>
         <td>
           <?php echo $form['title']->renderError() ?>
-          <?php echo $form['title'] ?>
+          <?php echo $form['title'] ?><div class="input-validation"></div>
         </td>
       </tr>
       <tr>
-        <th><?php echo $form['message']->renderLabel() ?></th>
+        <th><?php echo $form['message']->renderLabel() ?><span class="red">*</span></th>
         <td>
           <?php echo $form['message']->renderError() ?>
-          <?php echo $form['message'] ?>
+          <?php echo $form['message'] ?><div class="input-validation"></div>
         </td>
       </tr>      
     </tbody>

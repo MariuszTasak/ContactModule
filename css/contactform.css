@@ -1,0 +1,139 @@
+/* 
+    Document   : contactform
+    Created on : 2012-11-18, 15:27:27
+    Author     : pixel
+*/
+
+/* contact table */
+table#contact_table{
+        background: #f5f5f5;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+        -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);    
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        border-radius: 5px;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-collapse: separate;
+        position: relative;
+        font-family: Verdana, Times New Roman,Arial;
+        font-size: 13px;  
+}
+
+table#contact_table tbody tr td.first{
+        padding-top: 20px;
+}
+
+table#contact_table thead tr th{
+        font-size: 20px;
+        font-family: "Georgia", "Verdana", "Times New Roman";
+        color: #8d8d8d;
+        text-align: left;
+        padding-bottom: 6px;
+        border-bottom: 1px solid #c4c4c4;
+        text-shadow: 1px 1px 1px #222;
+}
+
+table#contact_table th{
+        text-align: right;
+        vertical-align: middle;
+}
+
+table#contact_table label{
+        color: #5e5e5e;
+        padding: 0px 3px 0px 10px;
+}
+
+
+/* placeholders */
+table#contact_table ::-webkit-input-placeholder { 
+        font-style: italic;
+        font-size: 0.8em;
+        padding-left: 4px;
+        font-family: "Verdana", "Times New Roman", "Arial"; 
+}
+table#contact_table :-moz-placeholder {
+        font-style: italic;
+        font-size: 0.8em;
+        padding-left: 4px;
+        font-family: "Verdana", "Times New Roman", "Arial";
+}
+
+
+/* validation */
+table#contact_table input[type="email"]:valid ~ .input-validation,
+table#contact_table input[type="text"]:valid ~ .input-validation,
+table#contact_table textarea:valid ~ .input-validation{
+        background-image: url(/images/form_valid.png);
+        background-repeat: no-repeat;    
+}
+
+
+/* inputs style */
+table#contact_table input[type="text"], table#contact_table input[type="email"], table#contact_table textarea {
+        background-color: white;
+        border: 1px solid #CCC;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+        -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);    
+        -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+        -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+        -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+        transition: border linear 0.2s, box-shadow linear 0.2s;
+        display: inline-block;
+        height: 20px;
+        width: 370px;
+        line-height: 20px;
+        min-width: 270px;
+        padding: 4px 6px;
+        margin-bottom: 9px;
+        font-size: 13px;    
+        color: #555;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;  
+}
+
+table#contact_table textarea{
+        height: 160px;   
+        max-width: 440px;
+        max-height: 250px;
+}
+
+table#contact_table input[type="text"]:focus, table#contact_table input[type="email"]:focus, table#contact_table textarea:focus{
+        border-color: rgba(82, 168, 236, 0.8);
+        outline: 0;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+        -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+
+table#contact_table input[type="submit"]{
+    float: right;
+}
+
+
+/* display validation status */
+.input-validation{
+        width: 20px;
+        height: 20px;
+        margin-left: 4px;
+        float: right;
+}
+
+
+/* helper style */
+.red{
+        color: #FF6161;
+}
+
+
+/* errors from server validation */
+table#contact_table ul.error_list{
+        margin-top: 4px;
+        color: #FF2727;
+        font-size: 11px;
+}
