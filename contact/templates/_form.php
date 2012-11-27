@@ -2,7 +2,14 @@
 <?php use_javascripts_for_form($form) ?>
 
 <form action="<?php echo url_for('contact/submit'); ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>
-  <table id="contact_form">
+  <table id="contact_table">
+    <thead>
+        <tr>
+            <th colspan="2">
+                Napisz do nas
+            </th>
+        </tr>
+    </thead>  
     <tfoot>
       <tr>
         <td colspan="2">
