@@ -17,21 +17,12 @@ class ContactForm extends sfForm  {
         $this->setWidgets(array(
             'email'     => new sfWidgetFormInput(array(), array(
                 'placeholder' => 'Podaj adres e-mail',
-                'type' => 'text',
-                'pattern' => '[^@]+@[^@]+\.[a-zA-Z]{2,6}',
-                'required' => 'required',
-                'title' => 'Proszę wprowadzić prawidłowy adres e-mail',
             )),
             'title'     => new sfWidgetFormInput(array(), array(
                 'placeholder' => 'Podaj tytuł wiadomości',
-                'required' => 'required',
-                'pattern' => '.{3,300}',
-                'title' => 'min znaków: 3, max znaków: 300'
             )),
             'message'   => new sfWidgetFormTextarea(array(), array(
                 'placeholder' => 'Podaj treść wiadomości',
-                'required' => 'required',
-                'title' => 'Podaj treść (min znaków: 3)'
             ))
         ));
         

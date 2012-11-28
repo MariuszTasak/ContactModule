@@ -2,3 +2,4 @@
 ---
 default:
   stylesheets: [contactform.css]
+  javascripts: [jquery-1.7.2.min.js, contactform.js]

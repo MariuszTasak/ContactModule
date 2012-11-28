@@ -62,14 +62,24 @@ table#contact_table :-moz-placeholder {
         font-family: "Verdana", "Times New Roman", "Arial";
 }
 
+/* before validation */
+table#contact_table .input-validation{
+        background-image: none;   
+}
 
-/* validation */
-table#contact_table input[type="email"]:valid ~ .input-validation,
-table#contact_table input[type="text"]:valid ~ .input-validation,
-table#contact_table textarea:valid ~ .input-validation{
+
+/* validation pass */
+table#contact_table .input-validation.valid{
         background-image: url(/images/form_valid.png);
         background-repeat: no-repeat;    
 }
+
+/* validation fail*/
+table#contact_table .input-validation.invalid{
+        background-image: url(/images/form_invalid.png);
+        background-repeat: no-repeat;    
+}
+
 
 
 /* inputs style */
@@ -120,6 +130,7 @@ table#contact_table input[type="submit"]{
 .input-validation{
         width: 20px;
         height: 20px;
+        margin-top: 4px;
         margin-left: 4px;
         float: right;
 }
