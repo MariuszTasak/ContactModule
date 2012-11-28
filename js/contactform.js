@@ -36,10 +36,12 @@ $(document).ready(function(){
         
         if ( isEmail(email) ){
             showValidIcon($(input).next('.input-validation'));
+            $(input).parent().children('.error').remove();
             return true;
         }
         else{
             showInvalidIcon($(input).next('.input-validation'));
+            $(input).parent().append('<p class="error">Proszę wprowadzić prawidłowy adres e-mail.</p>');
             return false;
         }          
     }
@@ -50,10 +52,12 @@ $(document).ready(function(){
         
         if ( validateMaxLength(title, 100) && validateMinLength(title, 3) ){
             showValidIcon(input.next('.input-validation'));
+            $(input).parent().children('.error').remove();
             return true;
         }
         else{
             showInvalidIcon(input.next('.input-validation'));
+            $(input).parent().append('<p class="error">Tytuł wiadomości musi zawierać od 3 do 100 znaków.</p>');
             return false;
         }      
     }
@@ -64,10 +68,12 @@ $(document).ready(function(){
         
         if ( validateMinLength(message, 3) ){
             showValidIcon(input.next('.input-validation'));
+            $(input).parent().children('.error').remove();
             return true;
         }
         else{
             showInvalidIcon(input.next('.input-validation'));
+            $(input).parent().append('<p class="error">Treść wiadomości musi zawierać conajmniej 3 znaki.</p>');
             return false;
         }      
     }

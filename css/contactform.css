@@ -99,7 +99,7 @@ table#contact_table input[type="text"], table#contact_table input[type="email"],
         line-height: 20px;
         min-width: 270px;
         padding: 4px 6px;
-        margin-bottom: 9px;
+        margin: 4px 0px 4px 0px;
         font-size: 13px;    
         color: #555;
         -webkit-border-radius: 3px;
@@ -133,6 +133,15 @@ table#contact_table input[type="submit"]{
         margin-top: 4px;
         margin-left: 4px;
         float: right;
+}
+
+/* display validation error */
+p.error{
+    font-size: 10px;
+    color: #FF4141;
+    font-style: italic;
+    margin: 0px 25px 0px 0px;
+    padding: 2px 6px;
 }
 
 
