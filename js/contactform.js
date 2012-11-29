@@ -34,9 +34,10 @@ $(document).ready(function(){
     function validateEmail(input){
         var email = input.val();
         
+        $(input).parent().children('.error').remove();
+        
         if ( isEmail(email) ){
-            showValidIcon($(input).next('.input-validation'));
-            $(input).parent().children('.error').remove();
+            showValidIcon($(input).next('.input-validation'));            
             return true;
         }
         else{
@@ -50,9 +51,10 @@ $(document).ready(function(){
     function validateTitle(input){
         var title = input.val();
         
+        $(input).parent().children('.error').remove();
+        
         if ( validateMaxLength(title, 100) && validateMinLength(title, 3) ){
-            showValidIcon(input.next('.input-validation'));
-            $(input).parent().children('.error').remove();
+            showValidIcon(input.next('.input-validation'));            
             return true;
         }
         else{
@@ -66,9 +68,10 @@ $(document).ready(function(){
     function validateMessage(input){
         var message = input.val();
         
+        $(input).parent().children('.error').remove();
+        
         if ( validateMinLength(message, 3) ){
-            showValidIcon(input.next('.input-validation'));
-            $(input).parent().children('.error').remove();
+            showValidIcon(input.next('.input-validation'));            
             return true;
         }
         else{
@@ -105,7 +108,7 @@ $(document).ready(function(){
         validateMessage(messageInput);
     });
     
-    /* on submit form */
+    /* validation on submit form */
     $('#contact_table input[type="submit"]').click(function(){
         if ( !validateEmail(emailInput) || !validateTitle(titleInput) || !validateMessage(messageInput) )
             return false;
