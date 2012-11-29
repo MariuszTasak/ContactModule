@@ -71,13 +71,13 @@ table#contact_table .input-validation{
 
 /* validation pass */
 table#contact_table .input-validation.valid{
-        background-image: url(/images/form_valid2.png);
+        background-image: url(/images/form_valid.png);
         background-repeat: no-repeat;    
 }
 
 /* validation fail*/
 table#contact_table .input-validation.invalid{
-        background-image: url(/images/form_invalid2.png);
+        background-image: url(/images/form_invalid.png);
         background-repeat: no-repeat;    
 }
 
